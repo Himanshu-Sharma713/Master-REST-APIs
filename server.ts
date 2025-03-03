@@ -1,10 +1,13 @@
-const app = require('./src/app.ts');
-const startServer = () => {
-  const PORT = process.env.PORT || 3000;
+import { config } from "./src/config/config";
 
-  app.listen(PORT, () => {
-    console.log(`Server Running at http://localhost:${PORT}/`);
+const app = require("./src/app.ts");
+
+const startServer = () => {
+  const port = config.port || 3000;
+
+  app.listen(port, () => {
+    console.log(`Server Running at http://localhost:${port}/`);
   });
 };
 
-startServer(); 
+startServer();

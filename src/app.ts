@@ -4,7 +4,7 @@ const app = express();
 
 // Routes 
 // Http methods:- GET, POST, PUT, PATCH, DELETE
-app.get("/", (req:any, res:any, next:any) => {
+app.get("/", (req, res, next) => {
   res.json({message:'welcome to ebook api project'})
   
 });
